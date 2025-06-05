@@ -1,0 +1,28 @@
+body {
+  font-family: "Nura", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "NuraBold", sans-serif;
+}
+
+:root {
+  --color-fondo: #070a0c;
+  --color-orange: #e44528;
+  --color-text: #fff;
+  --color-text-dark: #343434;
+  --color-azul: #1e3a8a;
+  --color-blanco: #d1d0cf;
+}
+
+.container{
+  background-color: var(--color-fondo);
+}
+
+.firstContainer{
+  color: var(--color-blanco);
+}

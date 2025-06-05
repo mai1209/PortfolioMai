@@ -1,0 +1,217 @@
+body {
+  font-family: "Nura", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "NuraBold", sans-serif;
+}
+
+:root {
+  --color-fondo: #070a0c;
+  --color-orange: #e44528;
+  --color-text: #fff;
+  --color-text-dark: #343434;
+  --color-azul: #1e3a8a;
+  --color-blanco: #d1d0cf;
+}
+
+.container {
+  background-color: var(--color-fondo);
+  min-height: fit-content;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  
+}
+
+.containerText {
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+z-index: 1;
+  justify-content: center;
+  padding-left: 100px;
+}
+
+.containerText :nth-child(1) {
+  text-transform: uppercase;
+  font-size: 120px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.containerText :nth-child(2) {
+  text-transform: uppercase;
+  font-size: 90px;
+  font-weight: 800;
+}
+
+.linePorfolio :nth-child(2) {
+  text-transform: uppercase;
+  font-size: 160px;
+  font-weight: 900;
+}
+.linePorfolio {
+  display: flex;
+  align-items: center;
+}
+
+.porfolioImg {
+  width: 150px;
+}
+
+.containerBootom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  cursor: pointer;
+}
+.text {
+  color: var(--color-text-dark);
+  font-weight: 800;
+  font-size: 40px;
+  margin-top: 30px;
+}
+
+.btn {
+  height: 90px;
+  width: 200px;
+  background-color: var(--color-orange);
+  font-size: 22px;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border: none;
+
+}
+
+.btn p {
+  font-family: "Nura";
+  text-align: left;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+.btn :nth-child(2) {
+  width: 31px;
+  height: 31px;
+  align-self: self-end;
+  margin-right: 20px;
+}
+
+.star{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 650px;
+  height: 650px;
+     animation: pulseStar 5s infinite ease-in-out;
+  transform-origin: center; 
+}
+
+@keyframes pulseStar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
+@media (max-width: 1399px) {
+  .containerText {
+    padding-left: 60px;
+  }
+  .containerText :nth-child(1) {
+    font-size: 70px;
+  }
+
+  .containerText :nth-child(2) {
+    font-size: 50px;
+  }
+
+  .linePorfolio :nth-child(2) {
+    font-size: 95px;
+  }
+  .porfolioImg {
+    width: 95px;
+  }
+  .text {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  .containerBootom {
+    padding: 0 10px;
+  }
+  .btn {
+    height: 70px;
+    width: 200px;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+}
+@media (max-width: 850px) {
+  .containerText {
+    padding-left: 20px;
+  }
+  .containerText :nth-child(1) {
+    font-size: 30px;
+  }
+
+  .containerText :nth-child(2) {
+    font-size: 25px;
+  }
+
+  .linePorfolio :nth-child(2) {
+    font-size: 50px;
+  }
+  .porfolioImg {
+    width: 50px;
+  }
+  .text {
+    font-size: 20px;
+    margin-top: 90px;
+  }
+  .containerBootom {
+    padding: 0 20px;
+  }
+  .btn {
+    height: 60px;
+    width: 150px;
+
+    font-size: 15px;
+
+    margin-bottom: 90px;
+  }
+  .btn p {
+    padding-left: 10px;
+  }
+  .btn :nth-child(2) {
+    margin-right: 10px;
+  }
+ .star{
+  position: absolute;
+  top: 40px;
+  right: -285px;
+  width: 600px;
+  height: 600px;
+
+}
+
+}
+
+

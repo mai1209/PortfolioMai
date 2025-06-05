@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'NuraBlack';
+  src: url('../assets/fonts/Nura-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NuraBold';
+  src: url('../assets/fonts/Nura-Bold.ttf') format('truetype');
+}
+
+
+/* Agrega los demás si querés */
