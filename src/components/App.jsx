@@ -17,7 +17,7 @@ function App() {
         </div>
       </div>
       <div className={style.containerBootom}>
-        <p className={style.text}>VERSION. 2025</p>
+        <p className={style.text}>VERSION. 2025 (para el commit)</p>
         <button className={style.btn} onClick={() => navigate("/work")}>
           <p>Explore now</p>
           <MdOutlineSubdirectoryArrowRight />
