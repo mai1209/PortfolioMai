@@ -48,7 +48,7 @@ function Work() {
             </div>
 
             <div className={style.containerPersonal}>
-              <img className={style.imgMai} src="/mai.png" alt="mai" />
+              <img className={style.imgMai}  src={`${process.env.PUBLIC_URL}/mai.png`} alt="mai" />
               <p className={style.title}>Defining Traits</p>
               <div className={style.containerSkills}>
                 <p>Vocational</p>
@@ -68,7 +68,7 @@ function Work() {
             <p className={style.titleclient}>SOME CLIENTS</p>
             <div className={style.containerAll}>
               <div className={style.info}>
-                <img src="/work1.png" alt="work1" />
+                <img  src={`${process.env.PUBLIC_URL}/work1.png`}  alt="work1" />
                 <div className={style.infoText}>
                   <p className={style.infoTitleP}>Growth expense manager app</p>
                   <p className={style.description}>
@@ -80,7 +80,7 @@ function Work() {
                 </div>
               </div>
               <div className={style.info}>
-                <img src="/work2.png" alt="work2" />
+                <img  src={`${process.env.PUBLIC_URL}/work2.png`}  alt="work2" />
                 <div className={style.infoText2}>
                   <p className={style.infoTitleP}>Vichos Barber App</p>
                   <p className={style.description}>
@@ -92,7 +92,7 @@ function Work() {
                 </div>
               </div>
               <div className={style.info}>
-                <img src="work3.png" alt="work3" />
+                <img  src={`${process.env.PUBLIC_URL}/work3.png`}  alt="work3" />
                 <div className={style.infoText3}>
                   <p className={style.infoTitleP}>Newt Book App</p>
                   <p className={style.description}>
@@ -105,7 +105,7 @@ function Work() {
                 </div>
               </div>
               <div className={style.info}>
-                <img src="work4.png" alt="work4" />
+                <img  src={`${process.env.PUBLIC_URL}/work4.png`} alt="work4" />
                 <div className={style.infoText4}>
                   <p className={style.infoTitleP}>Wifrut.com e-commerce for vegetables and fruits</p>
                   <p className={style.description}>

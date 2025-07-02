@@ -16,7 +16,7 @@ function Contact() {
                     </div>
                 </div>
                 <div className={style.cajaStart}>
-                    <img className={style.star} src="/star2.png" alt="start" />
+                    <img className={style.star}  src={`${process.env.PUBLIC_URL}/star2.png`}   alt="start" />
                     <p className={style.starText}>THANKS FOR <br /> VISIT ME, HOPE WE CAN<br /> WORK TOGETHER!</p>
                 </div>
             </div>

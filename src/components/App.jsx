@@ -12,7 +12,7 @@ function App() {
         <p>hi, im Maira coria.</p>
         <p>Welcome to my</p>
         <div className={style.linePorfolio}>
-          <img className={style.porfolioImg} src="/resume.png" alt="porfolio" />
+          <img className={style.porfolioImg}  src={`${process.env.PUBLIC_URL}/resume.png`} alt="resume" />
           <p>portfolio.</p>
         </div>
       </div>
@@ -23,7 +23,7 @@ function App() {
           <MdOutlineSubdirectoryArrowRight />
         </button>
       </div>
-      <img className={style.star} src="/star2.png" alt="start" />
+      <img className={style.star}  src={`${process.env.PUBLIC_URL}/start2.png`}  alt="start" />
     </div>
   );
 }
