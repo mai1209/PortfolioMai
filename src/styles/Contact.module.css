@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --color-fondo: #070a0c;
+  --color-orange: #e44528;
+  --color-text: #fff;
+  --color-text-dark: #343434;
+  --color-azul: #1e3a8a;
+  --color-blanco: #d1d0cf;
+}
+
+.container {
+  background-color: var(--color-fondo);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: fit-content;
+  flex-wrap: nowrap;
+ 
+
+
+
+}
+
+.fistContainer {
+  color: var(--color-text-dark);
+  margin: 60px 100px 50px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+}
+
+
+
+  .personalInfo {
+    font-size: 1rem;
+    max-width: 800px;
+    line-height: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin: 1rem auto;
+  }
+
+.title {
+  color: var(--color-blanco);
+  font-size: 25px;
+}
+
+
+
+
+@keyframes pulseStar {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.info {
+  display: flex;
+  flex-direction: column;
+ width: 50vw;
+
+}
+
+.dos{
+
+  width: 50vw;
+}
+
+.textContact {
+  margin: 50px 0px 50px 0px;
+  font-size: 36px;
+  color: var(--color-text);
+}
+
+.inputContainer {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.inputContainer input {
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 20px;
+  border-bottom: 1px solid var(--color-orange);
+  color: var(--color-blanco);
+}
+
+textarea {
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 20px;
+  color: var(--color-blanco);
+  border-bottom: 1px solid var(--color-orange);
+}
+
+.btn {
+  background-color: var(--color-orange);
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text);
+  margin: 30px 0;
+  font-size: 20px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.SM {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.star {
+  width: 10rem;
+  height: 10rem;
+}
+
+.cajaStart {
+  display: flex;
+  align-items: center;
+}
+
+.starText {
+   font-size: 2.5rem;
+    color: var(--color-orange);
+    max-width: 100%;
+  }
+
+
+
+@media (max-width: 850px) {
+  .container{
+    flex-direction: column;
+  }
+
+.fistContainer {
+  color: var(--color-text-dark);
+  margin: 10px auto 10px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+
+width: 100vw;
+
+}
+
+  .title {
+    font-size: 0.9rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
+
+  .personalInfo {
+    font-size: 0.9rem;
+    max-width: 340px;
+    line-height: 1.2rem;
+    margin-left: 0;
+    margin: 1rem auto;
+  }
+
+.cajaStart {
+
+  width: 100vw;
+}
+
+.starText {
+   font-size: 1.2rem;
+    color: var(--color-orange);
+
+  }
+
+
+  .textContact {
+    color: var(--color-text);
+    margin-left: 0.5rem;
+  }
+
+
+  .inputContainer input {
+    font-size: 12px;
+    padding: 10px;
+
+  }
+
+  textarea {
+    font-size: 12px;
+    padding: 10px;
+
+  }
+
+  .btn {
+    padding: 10px;
+    margin:  2rem auto;
+    font-size: 12px;
+    width: 300px;
+
+  }
+
+  .star{
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+.dos{
+
+  width: 100vw;
+}
+
+
+}
