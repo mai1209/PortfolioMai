@@ -1,8 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-   "homepage": "https://mai1209.github.io/PortfolioMai",
-
+  "homepage": "https://mai1209.github.io/PortfolioMai",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -16,6 +15,7 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.30.1",
     "react-scripts": "5.0.1",
+    "sweetalert2": "^11.22.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

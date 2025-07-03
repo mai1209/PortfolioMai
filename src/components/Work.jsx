@@ -1,5 +1,5 @@
 import style from "../styles/Work.module.css";
-import Waves from './Waves';
+//import Waves from './Waves';
 import { useNavigate } from "react-router-dom";
 //import { HiArrowTurnRightUp } from "react-icons/hi2";
 import Contact from './Contact';
@@ -11,7 +11,7 @@ function Work() {
     <div>
       <div className={style.container}>
 
-        {/* Fondo */}
+        {/* Fondo
         <div className={style.letterGlitchBackground}>
           <Waves
             lineColor="#e44528"
@@ -26,7 +26,7 @@ function Work() {
             xGap={12}
             yGap={36}
           />
-        </div>
+        </div> */}
 
         {/* Contenido arriba */}
         <div className={style.blur}>
@@ -39,16 +39,17 @@ function Work() {
               </div>
               <p className={style.skill}>SKILLS</p>
               <div className={style.skillsImg}>
-                <img src="/React.png" alt="react" />
-                <img src="/js.png" alt="js" />
-                <img src="/Html 5.png" alt="html" />
-                <img src="/css.png" alt="css" />
-                <img src="/sass.png" alt="sass" />
+                <img src={`${process.env.PUBLIC_URL}/React.png`} alt="react" />
+                <img src={`${process.env.PUBLIC_URL}/js.png`} alt="js" />
+                <img src={`${process.env.PUBLIC_URL}/Html 5.png`} alt="html5" />
+                <img src={`${process.env.PUBLIC_URL}/css.png`} alt="css" />
+                <img src={`${process.env.PUBLIC_URL}/sass.png`} alt="sass" />
+
               </div>
             </div>
 
             <div className={style.containerPersonal}>
-              <img className={style.imgMai}  src={`${process.env.PUBLIC_URL}/mai.png`} alt="mai" />
+              <img className={style.imgMai} src={`${process.env.PUBLIC_URL}/mai.png`} alt="mai" />
               <p className={style.title}>Defining Traits</p>
               <div className={style.containerSkills}>
                 <p>Vocational</p>
@@ -68,7 +69,7 @@ function Work() {
             <p className={style.titleclient}>SOME CLIENTS</p>
             <div className={style.containerAll}>
               <div className={style.info}>
-                <img  src={`${process.env.PUBLIC_URL}/work1.png`}  alt="work1" />
+                <img src={`${process.env.PUBLIC_URL}/work1.png`} alt="work1" />
                 <div className={style.infoText}>
                   <p className={style.infoTitleP}>Growth expense manager app</p>
                   <p className={style.description}>
@@ -80,7 +81,7 @@ function Work() {
                 </div>
               </div>
               <div className={style.info}>
-                <img  src={`${process.env.PUBLIC_URL}/work2.png`}  alt="work2" />
+                <img src={`${process.env.PUBLIC_URL}/work2.png`} alt="work2" />
                 <div className={style.infoText2}>
                   <p className={style.infoTitleP}>Vichos Barber App</p>
                   <p className={style.description}>
@@ -92,7 +93,7 @@ function Work() {
                 </div>
               </div>
               <div className={style.info}>
-                <img  src={`${process.env.PUBLIC_URL}/work3.png`}  alt="work3" />
+                <img src={`${process.env.PUBLIC_URL}/work3.png`} alt="work3" />
                 <div className={style.infoText3}>
                   <p className={style.infoTitleP}>Newt Book App</p>
                   <p className={style.description}>
@@ -105,7 +106,7 @@ function Work() {
                 </div>
               </div>
               <div className={style.info}>
-                <img  src={`${process.env.PUBLIC_URL}/work4.png`} alt="work4" />
+                <img src={`${process.env.PUBLIC_URL}/work4.png`} alt="work4" />
                 <div className={style.infoText4}>
                   <p className={style.infoTitleP}>Wifrut.com e-commerce for vegetables and fruits</p>
                   <p className={style.description}>

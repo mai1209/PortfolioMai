@@ -1,6 +1,61 @@
 import style from '../styles/Contact.module.css'
-
+import Swal from 'sweetalert2';
+import { useState } from "react";
 function Contact() {
+      const [isLoading, setIsLoading] = useState(false);
+ async function handleSubmit(event) {
+    event.preventDefault();
+    setIsLoading(true);
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.reset();
+        Swal.fire({
+          position: 'center',
+          width: '400px',
+          background: '#004d40',
+          color: '#ffffff',
+          title: '¡Enviado!',
+          text: 'Tu mensaje fue enviado con éxito. Te responderé a la brevedad.',
+          icon: 'success',
+          iconColor: '#ffd700',
+          confirmButtonText: 'Genial',
+          confirmButtonColor: '#ffd700',
+          customClass: {
+            confirmButton: style.mySwalButton,
+            title: style.mySwalTitle,
+          },
+          showConfirmButton: true,
+          backdrop: true,
+        });
+      } else {
+        Swal.fire({
+          title: 'Error',
+          text: 'Hubo un problema al enviar tu mensaje. Por favor, intenta de nuevo.',
+          icon: 'error',
+          confirmButtonText: 'Ok'
+        });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      Swal.fire({
+        title: 'Error de Conexión',
+        text: 'No pudimos conectarnos para enviar tu mensaje. Revisa tu conexión a internet.',
+        icon: 'error',
+        confirmButtonText: 'Entendido'
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
     return (
         <div className={style.container}>
@@ -21,12 +76,12 @@ function Contact() {
                 </div>
             </div>
             <div className={style.dos}>
-                <form action="">
+                <form id="contacto" action="https://formsubmit.co/maidev1209@gmail.com" method="POST" onSubmit={handleSubmit}>
                     <p className={style.textContact}>CONTACT</p>
                     <div className={style.inputContainer}>
-                        <input type="text" placeholder='name Codex Astra Hub' />
-                        <input type="text" placeholder='email codexastra.hub@gmail.com' />
-                        <input type="text" placeholder='subjet Developer’s portfolio' />
+                        <input type="text" name="name" placeholder='name Codex Astra Hub' />
+                        <input type="text" name="email" placeholder='email codexastra.hub@gmail.com' />
+                        <input type="text" name="subjet" placeholder='subjet Developer’s portfolio' />
                         <textarea
                             rows="4"
                             cols="50"
@@ -34,7 +89,7 @@ function Contact() {
                         ></textarea>
                     </div>
 
-                    <button className={style.btn}>send request</button>
+                    <button className={style.btn}  type="submit" disabled={isLoading} > {isLoading ? 'Enviando...' : 'send request'}</button>
                 </form>
                 <div className={style.SM}>
                     <p>Social media</p>

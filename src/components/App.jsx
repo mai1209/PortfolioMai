@@ -17,13 +17,13 @@ function App() {
         </div>
       </div>
       <div className={style.containerBootom}>
-        <p className={style.text}>VERSION. 2025 (para el commit)</p>
+        <p className={style.text}>VERSION. 2025</p>
         <button className={style.btn} onClick={() => navigate("/work")}>
-          <p>Explore now</p>
+          <p>EXPLORE now</p>
           <MdOutlineSubdirectoryArrowRight />
         </button>
       </div>
-      <img className={style.star}  src={`${process.env.PUBLIC_URL}/start2.png`}  alt="start" />
+      <img className={style.star}  src={`${process.env.PUBLIC_URL}/star2.png`}  alt="start" />
     </div>
   );
 }
