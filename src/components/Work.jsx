@@ -1,12 +1,12 @@
 import style from "../styles/Work.module.css";
 //import Waves from './Waves';
-import { useNavigate } from "react-router-dom";
+
 //import { HiArrowTurnRightUp } from "react-icons/hi2";
 import Contact from './Contact';
 
 
 function Work() {
-  const navigate = useNavigate();
+
   return (
     <div>
       <div className={style.container}>
@@ -116,7 +116,7 @@ function Work() {
               </div>
             </div>
 
-            <div className={style.ask} onClick={() => navigate("/contact")}>
+            <div className={style.ask} >
               <p>Ask</p>
               <p>for</p>
               <p>more</p>

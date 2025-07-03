@@ -21,14 +21,14 @@ function Contact() {
         Swal.fire({
           position: 'center',
           width: '400px',
-          background: '#004d40',
+          background: '#e44528',
           color: '#ffffff',
           title: '¡Enviado!',
           text: 'Tu mensaje fue enviado con éxito. Te responderé a la brevedad.',
           icon: 'success',
-          iconColor: '#ffd700',
+          iconColor: '#000000',
           confirmButtonText: 'Genial',
-          confirmButtonColor: '#ffd700',
+          confirmButtonColor: '#000000',
           customClass: {
             confirmButton: style.mySwalButton,
             title: style.mySwalTitle,
@@ -83,6 +83,7 @@ function Contact() {
                         <input type="text" name="email" placeholder='email codexastra.hub@gmail.com' />
                         <input type="text" name="subjet" placeholder='subjet Developer’s portfolio' />
                         <textarea
+                         name="message"
                             rows="4"
                             cols="50"
                             placeholder="Escribe tu mensaje aquí..."
