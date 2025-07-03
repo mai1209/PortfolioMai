@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://mai1209.github.io/PortfolioMai",
+  "homepage": "https://maidev.wtf",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
