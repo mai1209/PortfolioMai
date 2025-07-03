@@ -41,13 +41,15 @@ function Work() {
               </div>
               <p className={style.skill}>SKILLS</p>
               <div className={style.skillsImg}>
-                <img src={`${process.env.PUBLIC_URL}/React.png`} alt="react" />
+               
                 <img src={`${process.env.PUBLIC_URL}/js.png`} alt="js" />
                 <img src={`${process.env.PUBLIC_URL}/Html 5.png`} alt="html5" />
                 <img src={`${process.env.PUBLIC_URL}/css.png`} alt="css" />
-                <img src={`${process.env.PUBLIC_URL}/sass.png`} alt="sass" />
+                <img src={`${process.env.PUBLIC_URL}/sass.png`} alt="sass" /> <br />
+                 <img src={`${process.env.PUBLIC_URL}/React.png`} alt="react" />
                 <img src={`${process.env.PUBLIC_URL}/NPM.png`} alt="npm" />
-                <img src={`${process.env.PUBLIC_URL}/Nodejs.png`} alt="node" />
+                
+                <img src={`${process.env.PUBLIC_URL}/Nodejs.png`} alt="node" /> <br />
                 <img src={`${process.env.PUBLIC_URL}/Mongo.png`} alt="mongo" />
                 
 
