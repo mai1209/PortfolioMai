@@ -6,7 +6,7 @@ import Contact from './Contact';
 
 
 function Work() {
-
+  const listItems = Array.from({ length: 37 }, (_, i) => <li key={i}></li>);
   return (
     <div>
       <div className={style.container}>
@@ -27,7 +27,9 @@ function Work() {
             yGap={36}
           />
         </div> */}
-
+    <ul className={style.background}>
+        {listItems}
+      </ul>
         {/* Contenido arriba */}
         <div className={style.blur}>
           <div className={style.cajauno}>
@@ -44,6 +46,10 @@ function Work() {
                 <img src={`${process.env.PUBLIC_URL}/Html 5.png`} alt="html5" />
                 <img src={`${process.env.PUBLIC_URL}/css.png`} alt="css" />
                 <img src={`${process.env.PUBLIC_URL}/sass.png`} alt="sass" />
+                <img src={`${process.env.PUBLIC_URL}/NPM.png`} alt="npm" />
+                <img src={`${process.env.PUBLIC_URL}/Nodejs.png`} alt="node" />
+                <img src={`${process.env.PUBLIC_URL}/Mongo.png`} alt="mongo" />
+                
 
               </div>
             </div>

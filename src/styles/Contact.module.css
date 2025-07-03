@@ -16,6 +16,7 @@
   width: 100%;
   min-height: fit-content;
   flex-wrap: nowrap;
+  z-index: 999;
  
 
 
@@ -163,6 +164,8 @@ form textarea:focus-visible {
 .mySwalTitle {
   font-size: 1.5em !important;
 }
+
+
 
 @media (max-width: 850px) {
   .container{

@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-
-
+/* Nota: Estás usando la fuente "Nura", pero no la estás importando. 
+   El navegador usará 'sans-serif' en su lugar. 
+   Si 'Nura' es una fuente personalizada, asegúrate de importarla. */
 body {
   font-family: "Nura", sans-serif;
 }
@@ -11,8 +11,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-
 }
 
 :root {
@@ -25,25 +23,26 @@ body {
 }
 
 .container {
-
   background-color: var(--color-text-dark);
   max-height: fit-content;
   min-height: 90vh;
+  position: relative; /* Añadido para que el contenido se ponga sobre el fondo */
+  z-index: 1; /* Añadido para que el contenido se ponga sobre el fondo */
 }
 
 
 .blur {
   position: relative;
   z-index: 1;
-  background: linear-gradient(135deg, rgba(255, 250, 250, 0.182), rgba(252, 250, 250, 0.2));
-  backdrop-filter: blur(5px);
+  background: linear-gradient(135deg, #4D4D4D33, #4D4D4D33);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.82);
   height: fit-content;
-
-
+  border-bottom-left-radius: 20px;
+  border-top-left-radius:20px ;
 }
 
 .letterGlitchBackground {
@@ -56,6 +55,313 @@ body {
   pointer-events: none;
 }
 
+
+
+/* --- Estilos de la animación de fondo --- */
+.background {
+  position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+        background: var(--color-orange);
+
+    overflow: hidden;
+    z-index: -2; /* Asegura que esté detrás de todo */
+}
+
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    animation: animate 11s linear infinite;
+        background: #070a0c;
+
+}
+
+/* --- CORRECCIÓN PRINCIPAL AQUÍ --- */
+/* Este bloque @keyframes define la animación "animate" que faltaba */
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+
+.background li:nth-child(0) {
+    left: 12%;
+    width: 217px;
+    height: 217px;
+    bottom: -217px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 58%;
+    width: 181px;
+    height: 181px;
+    bottom: -181px;
+    animation-delay: 4s;
+}
+.background li:nth-child(2) {
+    left: 25%;
+    width: 149px;
+    height: 149px;
+    bottom: -149px;
+    animation-delay: 9s;
+}
+.background li:nth-child(3) {
+    left: 3%;
+    width: 202px;
+    height: 202px;
+    bottom: -202px;
+    animation-delay: 2s;
+}
+.background li:nth-child(4) {
+    left: 59%;
+    width: 162px;
+    height: 162px;
+    bottom: -162px;
+    animation-delay: 1s;
+}
+.background li:nth-child(5) {
+    left: 4%;
+    width: 158px;
+    height: 158px;
+    bottom: -158px;
+    animation-delay: 12s;
+}
+.background li:nth-child(6) {
+    left: 83%;
+    width: 116px;
+    height: 116px;
+    bottom: -116px;
+    animation-delay: 30s;
+}
+.background li:nth-child(7) {
+    left: 26%;
+    width: 186px;
+    height: 186px;
+    bottom: -186px;
+    animation-delay: 27s;
+}
+.background li:nth-child(8) {
+    left: 62%;
+    width: 138px;
+    height: 138px;
+    bottom: -138px;
+    animation-delay: 40s;
+}
+.background li:nth-child(9) {
+    left: 5%;
+    width: 199px;
+    height: 199px;
+    bottom: -199px;
+    animation-delay: 4s;
+}
+.background li:nth-child(10) {
+    left: 6%;
+    width: 214px;
+    height: 214px;
+    bottom: -214px;
+    animation-delay: 44s;
+}
+.background li:nth-child(11) {
+    left: 0%;
+    width: 111px;
+    height: 111px;
+    bottom: -111px;
+    animation-delay: 7s;
+}
+.background li:nth-child(12) {
+    left: 7%;
+    width: 161px;
+    height: 161px;
+    bottom: -161px;
+    animation-delay: 17s;
+}
+.background li:nth-child(13) {
+    left: 58%;
+    width: 201px;
+    height: 201px;
+    bottom: -201px;
+    animation-delay: 55s;
+}
+.background li:nth-child(14) {
+    left: 60%;
+    width: 138px;
+    height: 138px;
+    bottom: -138px;
+    animation-delay: 19s;
+}
+.background li:nth-child(15) {
+    left: 51%;
+    width: 208px;
+    height: 208px;
+    bottom: -208px;
+    animation-delay: 17s;
+}
+.background li:nth-child(16) {
+    left: 50%;
+    width: 142px;
+    height: 142px;
+    bottom: -142px;
+    animation-delay: 1s;
+}
+.background li:nth-child(17) {
+    left: 26%;
+    width: 231px;
+    height: 231px;
+    bottom: -231px;
+    animation-delay: 42s;
+}
+.background li:nth-child(18) {
+    left: 1%;
+    width: 225px;
+    height: 225px;
+    bottom: -225px;
+    animation-delay: 88s;
+}
+.background li:nth-child(19) {
+    left: 70%;
+    width: 116px;
+    height: 116px;
+    bottom: -116px;
+    animation-delay: 61s;
+}
+.background li:nth-child(20) {
+    left: 10%;
+    width: 210px;
+    height: 210px;
+    bottom: -210px;
+    animation-delay: 97s;
+}
+.background li:nth-child(21) {
+    left: 83%;
+    width: 192px;
+    height: 192px;
+    bottom: -192px;
+    animation-delay: 35s;
+}
+.background li:nth-child(22) {
+    left: 67%;
+    width: 119px;
+    height: 119px;
+    bottom: -119px;
+    animation-delay: 25s;
+}
+.background li:nth-child(23) {
+    left: 49%;
+    width: 227px;
+    height: 227px;
+    bottom: -227px;
+    animation-delay: 101s;
+}
+.background li:nth-child(24) {
+    left: 39%;
+    width: 134px;
+    height: 134px;
+    bottom: -134px;
+    animation-delay: 101s;
+}
+.background li:nth-child(25) {
+    left: 34%;
+    width: 172px;
+    height: 172px;
+    bottom: -172px;
+    animation-delay: 111s;
+}
+.background li:nth-child(26) {
+    left: 64%;
+    width: 231px;
+    height: 231px;
+    bottom: -231px;
+    animation-delay: 88s;
+}
+.background li:nth-child(27) {
+    left: 22%;
+    width: 128px;
+    height: 128px;
+    bottom: -128px;
+    animation-delay: 99s;
+}
+.background li:nth-child(28) {
+    left: 81%;
+    width: 225px;
+    height: 225px;
+    bottom: -225px;
+    animation-delay: 11s;
+}
+.background li:nth-child(29) {
+    left: 87%;
+    width: 220px;
+    height: 220px;
+    bottom: -220px;
+    animation-delay: 2s;
+}
+.background li:nth-child(30) {
+    left: 39%;
+    width: 100px;
+    height: 100px;
+    bottom: -100px;
+    animation-delay: 54s;
+}
+.background li:nth-child(31) {
+    left: 49%;
+    width: 104px;
+    height: 104px;
+    bottom: -104px;
+    animation-delay: 7s;
+}
+.background li:nth-child(32) {
+    left: 78%;
+    width: 115px;
+    height: 115px;
+    bottom: -115px;
+    animation-delay: 23s;
+}
+.background li:nth-child(33) {
+    left: 22%;
+    width: 175px;
+    height: 175px;
+    bottom: -175px;
+    animation-delay: 81s;
+}
+.background li:nth-child(34) {
+    left: 15%;
+    width: 110px;
+    height: 110px;
+    bottom: -110px;
+    animation-delay: 168s;
+}
+.background li:nth-child(35) {
+    left: 78%;
+    width: 155px;
+    height: 155px;
+    bottom: -155px;
+    animation-delay: 35s;
+}
+.background li:nth-child(36) {
+    left: 30%;
+    width: 129px;
+    height: 129px;
+    bottom: -129px;
+    animation-delay: 118s;
+}
+
+
+/* Resto de tus estilos... */
+
 .cajauno {
   display: flex;
   justify-content: space-around;
@@ -67,7 +373,6 @@ body {
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 0.5rem;
-
 }
 
 .firstText,
@@ -89,7 +394,6 @@ body {
 .skillsImg img {
   width: 25px;
   height: 25px;
-
 }
 
 .containerPersonal {
@@ -142,8 +446,6 @@ body {
   padding: 5px 10px;
   margin: 30px 10px 0 10px;
   border-top-right-radius: 5rem;
-
-
 }
 
 .titleclient {
@@ -200,18 +502,15 @@ body {
   font-style: normal;
   color: var(--color-text);
   text-align: end;
-
 }
 
 
 @media (min-width: 850px) {
   .blur {
-
     display: flex;
     justify-content: center;
     border-top-right-radius: 10rem;
     gap: 3rem;
-
   }
 
   .cajauno {
@@ -223,20 +522,15 @@ body {
   .containerText {
     font-size: 2.5rem;
     width: 400px;
-
   }
 
-
   .skill {
-
     font-size: 25px;
-
   }
 
   .skillsImg img {
     width: 40px;
     height: 40px;
-
   }
 
   .containerPersonal {
@@ -246,39 +540,29 @@ body {
     margin-top: 0.5rem;
   }
 
-
   .imgMai {
     width: 13rem;
     height: 9rem;
-
   }
 
   .title {
-
     font-size: 1rem;
-
   }
 
   .containerSkills {
     font-size: 0.8rem;
     max-width: 100%;
-
   }
 
   .titleclient {
-
     font-size: 2.5rem;
-
   }
 
   .Work {
     margin: 0 0 0 10px;
     width: 600px;
     border-top-right-radius: 10rem;
-
   }
-
-
 
   .ask {
     position: absolute;
@@ -288,10 +572,7 @@ body {
   }
 
   .containerAll {
-
-
     position: relative;
-
   }
 
   .containerAll .info:nth-child(1) {
@@ -311,11 +592,8 @@ body {
   }
 
   .info {
-
-
     font-size: 0.5rem;
     max-width: 100%;
-
   }
 
   .info img {
@@ -329,22 +607,13 @@ body {
 
   .description {
     font-size: 0.6rem;
-
   }
 
   .container {
-
-
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #7E2616;
-
-
-
-
-
   }
-
 }
