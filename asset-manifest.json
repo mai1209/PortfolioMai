@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/PortfolioMai/static/css/main.aec93fd0.css",
-    "main.js": "/PortfolioMai/static/js/main.c6413f53.js",
+    "main.css": "/PortfolioMai/static/css/main.89435f4b.css",
+    "main.js": "/PortfolioMai/static/js/main.ce99dffa.js",
     "static/js/453.1407b060.chunk.js": "/PortfolioMai/static/js/453.1407b060.chunk.js",
     "static/media/Nura-Bold.ttf": "/PortfolioMai/static/media/Nura-Bold.65444392f491bad998c0.ttf",
     "static/media/Nura-Black.ttf": "/PortfolioMai/static/media/Nura-Black.d80c60267f1c9c19b88d.ttf",
     "index.html": "/PortfolioMai/index.html",
-    "main.aec93fd0.css.map": "/PortfolioMai/static/css/main.aec93fd0.css.map",
-    "main.c6413f53.js.map": "/PortfolioMai/static/js/main.c6413f53.js.map",
+    "main.89435f4b.css.map": "/PortfolioMai/static/css/main.89435f4b.css.map",
+    "main.ce99dffa.js.map": "/PortfolioMai/static/js/main.ce99dffa.js.map",
     "453.1407b060.chunk.js.map": "/PortfolioMai/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aec93fd0.css",
-    "static/js/main.c6413f53.js"
+    "static/css/main.89435f4b.css",
+    "static/js/main.ce99dffa.js"
   ]
 }
