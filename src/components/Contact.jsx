@@ -2,13 +2,13 @@ import style from '../styles/Contact.module.css'
 import Swal from 'sweetalert2';
 import { useState } from "react";
 function Contact() {
-      const [isLoading, setIsLoading] = useState(false);
- async function handleSubmit(event) {
+  const [isLoading, setIsLoading] = useState(false);
+  async function handleSubmit(event) {
     event.preventDefault();
     setIsLoading(true);
     const form = event.target;
     const formData = new FormData(form);
-    
+
     try {
       const response = await fetch(form.action, {
         method: form.method,
@@ -57,48 +57,59 @@ function Contact() {
     }
   }
 
-    return (
-        <div className={style.container}>
-            <div className={style.info}>
-                <div className={style.uno}>
-                    <div className={style.fistContainer}>
-                        <div className={style.containerStart}>
-                            <p className={style.title}> Know little about me</p>
+  return (
+    <div className={style.container}>
+      <div className={style.info}>
+        <div className={style.uno}>
+          <div className={style.fistContainer}>
+            <div className={style.containerStart}>
+              <p className={style.title}> Know little about me</p>
 
-                        </div>
-                        <p className={style.personalInfo}>I'm Maira Coria, a full-stack developer from Santa Fe (Capital), Argentina. At 28 years old, I'm ready to take the next step in my career as a web developer. I'm passionate about learning and taking on new challenges, and I pride myself on my responsibility and dedication. I seek opportunities to apply my full-stack skills to innovative projects that make a difference. I also have an intermediate level of English, which allows me to collaborate effectively in diverse and multicultural environments. <br /><br />
-                        I'm currently running a small tech startup with my partner, a CEO, and a team of designers, editors, and marketing professionals.</p>
-                    </div>
-                </div>
-                <div className={style.cajaStart}>
-                    <img className={style.star}  src={`${process.env.PUBLIC_URL}/star2.png`}   alt="start" />
-                    <p className={style.starText}>THANKS FOR <br /> VISIT ME, HOPE WE CAN<br /> WORK TOGETHER!</p>
-                </div>
             </div>
-            <div className={style.dos}>
-                <form id="contacto" action="https://formsubmit.co/maidev1209@gmail.com" method="POST" onSubmit={handleSubmit}>
-                    <p className={style.textContact}>CONTACT</p>
-                    <div className={style.inputContainer}>
-                        <input type="text" name="name" required placeholder='name Codex Astra Hub' />
-                        <input type="text" name="email" required placeholder='email codexastra.hub@gmail.com' />
-                        <input type="text" name="subjet" requi placeholder='subjet Developer’s portfolio' />
-                        <textarea
-                         name="message"
-                            rows="4"
-                            cols="50"
-                            placeholder="Escribe tu mensaje aquí..."
-                        ></textarea>
-                    </div>
-
-                    <button className={style.btn}  type="submit" disabled={isLoading} > {isLoading ? 'Enviando...' : 'send request'}</button>
-                </form>
-                <div className={style.SM}>
-                    <p>Social media</p>
-
-                </div>
-            </div>
+            <p className={style.personalInfo}>I'm Maira Coria, a full-stack developer from Santa Fe (Capital), Argentina. At 28 years old, I'm ready to take the next step in my career as a web developer. I'm passionate about learning and taking on new challenges, and I pride myself on my responsibility and dedication. I seek opportunities to apply my full-stack skills to innovative projects that make a difference. I also have an intermediate level of English, which allows me to collaborate effectively in diverse and multicultural environments. <br /><br />
+              I'm currently running a small tech startup with my partner, a CEO, and a team of designers, editors, and marketing professionals.</p>
+          </div>
         </div>
-    )
+        <div className={style.cajaStart}>
+          <img className={style.star} src={`${process.env.PUBLIC_URL}/star2.png`} alt="start" />
+          <p className={style.starText}>THANKS FOR <br /> VISIT ME, HOPE WE CAN<br /> WORK TOGETHER!</p>
+        </div>
+      </div>
+      <div className={style.dos}>
+        <form
+          id="contacto"
+          action="https://formsubmit.co/maidev1209@gmail.com"
+          method="POST"
+          onSubmit={handleSubmit}
+        >
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://google.com" />
+
+          <p className={style.textContact}>CONTACT</p>
+          <div className={style.inputContainer}>
+            <input type="text" name="name" required placeholder='name Codex Astra Hub' />
+            <input type="email" name="email" required placeholder='email codexastra.hub@gmail.com' />
+            <input type="text" name="subject" required placeholder='Subject: Developer’s portfolio' />
+            <textarea
+              name="message"
+              rows="4"
+              cols="50"
+              required
+              placeholder="Escribe tu mensaje aquí..."
+            ></textarea>
+          </div>
+
+          <button className={style.btn} type="submit" disabled={isLoading}>
+            {isLoading ? 'Enviando...' : 'send request'}
+          </button>
+        </form>
+        <div className={style.SM}>
+          <p>Social media</p>
+
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Contact
