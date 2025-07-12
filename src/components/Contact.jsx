@@ -79,9 +79,9 @@ function Contact() {
                 <form id="contacto" action="https://formsubmit.co/maidev1209@gmail.com" method="POST" onSubmit={handleSubmit}>
                     <p className={style.textContact}>CONTACT</p>
                     <div className={style.inputContainer}>
-                        <input type="text" name="name" placeholder='name Codex Astra Hub' />
-                        <input type="text" name="email" placeholder='email codexastra.hub@gmail.com' />
-                        <input type="text" name="subjet" placeholder='subjet Developer’s portfolio' />
+                        <input type="text" name="name" required placeholder='name Codex Astra Hub' />
+                        <input type="text" name="email" required placeholder='email codexastra.hub@gmail.com' />
+                        <input type="text" name="subjet" required placeholder='subjet Developer’s portfolio' />
                         <textarea
                          name="message"
                             rows="4"

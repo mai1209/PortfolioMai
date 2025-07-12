@@ -23,7 +23,9 @@ function App() {
           <MdOutlineSubdirectoryArrowRight />
         </button>
       </div>
-      <img className={style.star}  src={`${process.env.PUBLIC_URL}/star2.png`}  alt="start" />
+     <div className={style.containerStart}>
+       <img className={style.star}  src={`${process.env.PUBLIC_URL}/star2.png`}  alt="start" />
+     </div>
     </div>
   );
 }

@@ -98,7 +98,12 @@ body {
   margin-bottom: 60px;
   border: none;
   z-index: 99999  ;
+  cursor: pointer;
 
+}
+.btn:hover{
+  height: 95px;
+  width: 205px;
 }
 
 .btn p {
@@ -124,6 +129,7 @@ body {
   height: 650px;
      animation: pulseStar 5s infinite ease-in-out;
   transform-origin: center; 
+ 
 }
 
 @keyframes pulseStar {
@@ -172,6 +178,12 @@ body {
 
 }
 @media (max-width: 850px) {
+  
+  .container{
+    position: relative;
+    overflow: hidden;
+    z-index: 9999;
+  }
   .containerText {
     padding-left: 20px;
   }
