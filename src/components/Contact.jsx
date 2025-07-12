@@ -81,7 +81,7 @@ function Contact() {
                     <div className={style.inputContainer}>
                         <input type="text" name="name" required placeholder='name Codex Astra Hub' />
                         <input type="text" name="email" required placeholder='email codexastra.hub@gmail.com' />
-                        <input type="text" name="subjet" required placeholder='subjet Developer’s portfolio' />
+                        <input type="text" name="subjet" requi placeholder='subjet Developer’s portfolio' />
                         <textarea
                          name="message"
                             rows="4"
